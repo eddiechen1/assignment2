@@ -1,0 +1,89 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 2200,
+    "height": 1000,
+    "title": {"text": "Distribution of Michelin Star Restaurants Around the World", "fontSize": 30},
+    "projection": {"type": "equalEarth"},
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/eddiechen1/assignment2/main/data/ne_110m.json",
+          "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/eddiechen1/assignment2/main/data/michelin-restaurants.csv"
+        },
+        "mark": {"type": "circle", "tooltip": {"content": "data"}},
+        "encoding": {
+          "longitude": {"field": "longitude", "type": "quantitative"},
+          "latitude": {"field": "latitude", "type": "quantitative"},
+          "size": {
+            "field": "stars",
+            "type": "ordinal",
+            "title": "Michelin Stars",
+            "scale": {"domain": [1, 2, 3]},
+            "legend": {"labelFontSize": 20, "titleFontSize": 24}
+          },
+          "color": {
+            "field": "price",
+            "type": "ordinal",
+            "title": "Price (0 if data available)",
+            "scale": {"scheme": "greens"},
+            "legend": {"labelFontSize": 20, "titleFontSize": 24, "titleLimit": 350}
+          }, 
+          "opacity":{
+            "value": 0.5
+        },
+        "tooltip": [
+          {"field": "name", "type": "nominal", "title": "Name"},
+          {"field": "latitude", "type": "quantitative", "format": ",", "title": "Latitude"},
+          {"field": "longitude", "type": "quantitative", "format": ",", "title": "Longitude"},
+          {"field": "city", "type": "nominal", "title": "City"},
+          {"field": "region", "type": "nominal", "title": "Region"},
+          {"field": "cuisine", "type": "nominal", "title": "Cuisine"},
+          {"field": "price", "type": "ordinal", "title": "Price"},
+          {"field": "stars", "type": "ordinal", "title": "Michelin Stars"}
+        ]
+        }
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/eddiechen1/assignment2/main/data/michelin-restaurants.csv"
+        },
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "baseline": "middle",
+            "dx": -12,
+            "fontSize": 16.5,
+            "fontStyle": "italic"
+          },
+          "encoding": {
+            "text": {"field": "region", "type": "nominal"},
+            "longitude": {"field": "longitude", "type": "quantitative"},
+            "latitude": {"field": "latitude", "type": "quantitative"},
+            "color": {"value": "black"},
+            "opacity": {
+              "condition": {
+                "test": "datum['name'] == 'Jade Dragon' || datum['name'] == 'Alinea' || datum['name'] == 'Gordon Ramsay'",
+                "value": 1
+              },
+              "value": 0
+            },
+            "tooltip": [
+              {"field": "name", "type": "nominal", "title": "Name"},
+              {"field": "latitude", "type": "quantitative", "format": ",", "title": "Latitude"},
+              {"field": "longitude", "type": "quantitative", "format": ",", "title": "Longitude"},
+              {"field": "city", "type": "nominal", "title": "City"},
+              {"field": "region", "type": "nominal", "title": "Region"},
+              {"field": "cuisine", "type": "nominal", "title": "Cuisine"},
+              {"field": "price", "type": "ordinal", "title": "Price"},
+              {"field": "stars", "type": "ordinal", "title": "Michelin Stars"}
+            ]
+        }
+      }
+    ]
+  }

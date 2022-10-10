@@ -1,0 +1,22 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",    
+    "width": 2200,
+    "height": 3000,
+    "title": { "text": "Michelin Stars per Cuisine (excluding unique cuisines)", "fontSize": 30},
+    "data": {
+    "url":
+    "https://raw.githubusercontent.com/eddiechen1/assignment2/main/data/michelin-groupby-cuisines.csv"
+    },
+    "mark": "bar",
+    "encoding": {
+    "y": { "field": "Cuisine", "type": "nominal", "title": "Cuisine", 
+    "axis": {"titleFontSize": 25, "labelFontSize": 20}},
+    "x": { "field": "Number of Restaurants", "type": "quantitative" , 
+    "axis": {"titleFontSize": 25, "labelFontSize": 20}},
+    "color": {"value": "#ff9999"},
+    "tooltip": [
+      {"field": "Cuisine", "type": "nominal", "title": "Cuisine"},
+      {"field": "Number of Restaurants", "type": "quantitative", "title": "Restaurants"}
+    ]
+    }
+}

@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
+    "width": 1200,
     "height": 600,
     "title": "Michelin Star Restaurants",
     "data": {
-      "url": "https://raw.githubusercontent.com/eddiechen1/data_vis_1/main/data/michelin-restaurants.csv"
+      "url": "https://raw.githubusercontent.com/eddiechen1/assignment2/main/data/michelin-restaurants.csv"
     },
     "params": [
       {
@@ -38,17 +38,14 @@
     ],
     "encoding": {
       "x": {
-        "field": "latitude",
-        "type": "quantitative",
-        "title": "Latitude",
-        "axis": {"tickCount": 7},
-        "scale": {"domain": [-30, 65]}
+        "field": "price",
+        "type": "ordinal",
+        "title": "Price",
+        "scale": {"domain": [1, 5]}
       },
       "y": {
-        "field": "longitude",
-        "type": "quantitative",
-        "axis": {"tickCount": 6},
-        "scale": {"domain": [-130, 130]}
+        "field": "region",
+        "type": "nominal"
       }
     },
     "layer": [
