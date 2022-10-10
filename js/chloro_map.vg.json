@@ -28,7 +28,7 @@
         "field": "Number of Michelin Stars",
         "type": "quantitative",
         "scale": {"domain": [0, 250]},
-        "legend": {"labelFontSize": 20, "titleFontSize": 24}
+        "legend": {"labelFontSize": 20, "titleFontSize": 24, "titleLimit": 350}
       },
       "tooltip": [
         {"field": "properties.NAME", "type": "nominal", "title": "Country"},
