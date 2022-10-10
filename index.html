@@ -9,24 +9,56 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
   
 </head>
+
 <body>
-  
-<div id="scatter_plot"></div>
-
+<div id="chloro_map"></div>
 <script type="text/javascript">
-
-  var spec2 = "js/scatter_plot_interactive.vg.json";
-  vegaEmbed('#scatter_plot', spec2).then(function(result) {
+  var spec1 = "js/chloro_map.vg.json";
+  vegaEmbed('#chloro_map', spec1).then(function(result) {
   }).catch(console.error);
 </script>
-<script src="js/vega_lite_vis.js"></script>
-<br><br><br>
-</head>
 
-<body>
-<div id="visualization">
-</div>
-</body>
+<p><span style="font-size:26px">The majority of the countries which hold Michelin stars are concentrated around the </span><span style="font-size:26px">
+<span style="color:#27ae60"><strong>USA, UK and China</strong></span></span><span style="font-size:26px">.</span></p>
+<br><br><br><br><br><br>
 
+<div id="broad_vis"></div>
+<script type="text/javascript">
+  var spec2 = "js/broad_vis.vg.json";
+  vegaEmbed('#broad_vis', spec2).then(function(result) {
+  }).catch(console.error);
+</script>
+
+<p><span style="font-size:26px">Michelin star restaurants appear to be </span><span style="font-size:26px"><span style="color:#16a085">
+<strong>concentrated around coastal cities</strong></span></span><span style="font-size:26px">, as seen in the USA, South America and China.</span></p>
+<p><span style="font-size:26px">In conjunction with the choropleth map, it is clear that despite the UK having more Michelin star restaurants than Germany and Austria - </span><span style="color:#2980b9"><span style="font-size:26px">
+<strong>Germany and Austria have more restaurants with a higher number of stars</strong></span></span><span style="font-size:26px">.</span></p>
+<br><br><br><br><br><br>
+
+<div id="bar_chart"></div>
+<script type="text/javascript">
+  var spec3 = "js/bar_chart.vg.json";
+  vegaEmbed('#bar_chart', spec3).then(function(result) {
+  }).catch(console.error);
+</script>
+<p><span style="font-size:26px">While the USA leads in all categories of stars, 
+</span><span style="font-size:26px"><span style="color:#c0392b"><strong>China has more two and three star restaurants than the UK</strong>
+</span></span><span style="font-size:26px"> - despite the UK having more stars overall.</span></p>
+<br><br><br><br><br><br>
+
+<div id="bar_cuisine"></div>
+<script type="text/javascript">
+  var spec4 = "js/bar_cuisine.vg.json";
+  vegaEmbed('#bar_cuisine', spec4).then(function(result) {
+  }).catch(console.error);
+</script>
+<h4><span style="font-size:26px">It is clear that </span><span style="font-size:28px"><strong><em>
+  <span style="color:#b96ad9">Modern Cuisine</span></em></strong></span><span style="font-size:26px">
+     is the most commmon cuisine type, followed by Contemporary. </span><span style="font-size:28px">
+      <span style="color:#b96ad9"><em><strong>Modern-type</strong></em></span></span>
+      <span style="font-size:26px"><span style="color:#b96ad9"><em> </em></span>and 
+    </span><span style="font-size:28px"><span style="color:#b96ad9"><em><strong>Japanese</strong>
+    </em></span></span><span style="font-size:26px"><span style="color:#b96ad9"><em> </em>
+    </span>cuisines dominate the most commonly awarded Michelin star cuisines.</span></h4>
 </body>
 </html>
