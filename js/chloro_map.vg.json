@@ -55,7 +55,7 @@
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": "datum['region'] == 'Jade Dragon' || datum['name'] == 'Alinea' || datum['name'] == 'D.O.M.'",
+            "test": "datum['name'] == 'Jade Dragon' || datum['name'] == 'Alinea' || datum['name'] == 'D.O.M.'",
             "value": 1
           },
           "value": 0
