@@ -1,9 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {"text": "Distribution of Michelin Star Restaurants per Country", "fontSize": 30},
-    "width": 2200,
-    "height": 1000,
+    "width": 1000,
+    "height": 500,
     "projection": {"type": "equalEarth"},
+    "config": {"background": "azure", "view":{"stroke": "transparent"}},
     "layer":[{
     "data": {
       "url": "https://raw.githubusercontent.com/eddiechen1/assignment2/main/data/ne_110m.json",
@@ -45,7 +46,7 @@
         "align": "right",
         "baseline": "middle",
         "dx": -12,
-        "fontSize": 20.5,
+        "fontSize": 16.5,
         "fontStyle": "italic"
       },
       "encoding": {
@@ -55,7 +56,7 @@
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": "datum['name'] == 'Jade Dragon' || datum['name'] == 'Alinea' || datum['name'] == 'D.O.M.'",
+            "test": "datum['name'] == 'Jade Dragon' || datum['name'] == 'Alinea' || datum['name'] == 'Gordon Ramsay'",
             "value": 1
           },
           "value": 0

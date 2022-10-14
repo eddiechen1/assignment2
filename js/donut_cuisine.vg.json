@@ -1,0 +1,33 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",    
+    "title": { "text": "Top Four Michelin Star Cuisines", "fontSize": 30, "anchor": "middle"},
+    "config": {"background": "azure", "view":{"stroke": "transparent"}},
+    "data": {
+    "url":
+    "https://raw.githubusercontent.com/eddiechen1/assignment2/main/data/michelin-groupby-cuisines.csv"
+    },
+    "transform": [
+      {"joinaggregate": [{"op": "sum", "field": "Number of Restaurants", "as": "total"}]}
+    ],
+    "facet": {"column": {"field": "Cuisine"}},
+    "spec": {
+      "layer": [
+        {
+          "mark": {"type": "arc", "innerRadius": 80, "outerRadius": 110, "color": "lightgray"},
+          "encoding": {"theta": {"field": "total", "type": "quantitative"}}
+        },
+        {
+          "mark": {"type": "arc", "innerRadius": 120, "outerRadius":90},
+          "encoding": {
+            "theta": {"field": "Number of Restaurants", "type": "quantitative"},
+            "color": {"field": "Cuisine"}
+          }
+        },
+        {
+          "mark":{"type": "text"},
+          "encoding": {"text":{"field":"Number of Restaurants", "type": "quantitative"}}
+        }
+      ],
+      "view": {"stroke": null}
+    }
+  }

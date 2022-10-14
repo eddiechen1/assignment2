@@ -3,6 +3,7 @@
     "width": 2200,
     "height": 3000,
     "title": { "text": "Michelin Stars per Cuisine (excluding unique cuisines)", "fontSize": 30},
+    "config": {"background": "azure", "view":{"stroke": "transparent"}},
     "data": {
     "url":
     "https://raw.githubusercontent.com/eddiechen1/assignment2/main/data/michelin-groupby-cuisines.csv"

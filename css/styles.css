@@ -1,8 +1,44 @@
-#scatter_plot {
-	top:0px;
-	bottom: 0px; 
-	left: 0px;
-	right: 0px;
-	/*height: 1000px;
-	width: 800px;*/
+#chloro_map{	
+	background-color: azure;
+	align-content: center;
+	padding-left: 23%;
+}
+
+#broad_vis{	
+	background-color: azure;
+	align-items: center;
+	padding-left: 23%;
+}
+
+#bar_chart{	
+	background-color: azure;
+	align-items: center;
+	padding-left: 23%;
+}
+
+#text{
+	text-align: center;
+}
+
+#text1{
+	text-align: center;
+}
+
+#text2{
+	text-align: center;
+}
+
+#text3{
+	text-align: center;
+}
+
+#wholething{
+	justify-content: center;
+	background-color:azure;
+}
+
+#donut_cuisine{
+	background-color: azure;
+	align-items: center;
+	padding-left: 21%;
 }

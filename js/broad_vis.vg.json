@@ -1,8 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 2200,
-    "height": 1000,
+    "width": 1000,
+    "height": 500,
     "title": {"text": "Distribution of Michelin Star Restaurants Around the World", "fontSize": 30},
+    "config": {"background": "azure", "view":{"stroke": "transparent"}},
     "projection": {"type": "equalEarth"},
     "layer": [
       {
@@ -68,7 +69,7 @@
             "color": {"value": "black"},
             "opacity": {
               "condition": {
-                "test": "datum['name'] == 'Jade Dragon' || datum['name'] == 'Alinea' || datum['name'] == 'Gordon Ramsay'",
+                "test": "datum['name'] == 'Alinea' || datum['name'] == 'Gordon Ramsay' || datum['name'] == 'D.O.M.'",
                 "value": 1
               },
               "value": 0

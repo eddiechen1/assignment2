@@ -1,8 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",    
-    "width": 2200,
-    "height": 1000,
+    "width": 1000,
+    "height": 500,
     "title": { "text": "Michelin Stars per Country" , "fontSize": 30},
+    "config": {"background": "azure", "view":{"stroke": "transparent"}},
     "data": {
     "url":
     "https://raw.githubusercontent.com/eddiechen1/assignment2/main/data/michelin-groupby-separated.csv"
